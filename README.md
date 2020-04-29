@@ -1,11 +1,17 @@
 # CTF-resource
 This help a biggener CTF player with some knowledge when he is struck! 
-
-i have just uploded the cryptography file.
+uploded files till now:-
+cryptography.
+Esoteric Languages.
 lot more to uploded.
                       
                       
   # Usage 
   just open the file.
+  
+  # The resourse used to get the info is:-
+  google
+  some of the github pages of users like 
+  # john-hammond :- CTF player.
 
 
