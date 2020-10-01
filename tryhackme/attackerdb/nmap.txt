@@ -1,0 +1,13 @@
+# Nmap 7.80 scan initiated Mon Jul 27 16:55:29 2020 as: nmap -sC -sV -oN nmap.txt 10.10.145.5
+Nmap scan report for 10.10.145.5
+Host is up (1.9s latency).
+Not shown: 996 closed ports
+PORT      STATE    SERVICE      VERSION
+515/tcp   filtered printer
+1201/tcp  filtered nucleus-sand
+7741/tcp  filtered scriptview
+10000/tcp open     http         MiniServ 1.890 (Webmin httpd)
+|_http-title: Site doesn't have a title (text/html; Charset=iso-8859-1).
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jul 27 16:57:34 2020 -- 1 IP address (1 host up) scanned in 124.93 seconds

