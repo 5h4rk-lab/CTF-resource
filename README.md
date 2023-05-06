@@ -11,7 +11,7 @@ A list of useful tools and software for CTF competitions.
 A collection of CTF challenges from various competitions, with solutions and write-ups where available.
 Guides: Guides and tutorials on various topics related to CTF competitions, including web exploitation, cryptography, reverse engineering, and more.
 
-# CTF Platforms
+# [CTF Platforms](https://github.com/5h4rk-lab/CTF-resource/blob/master/CTFplatforms.md)
 A list of popular CTF platforms for hosting and participating in CTF competitions.
 
 # Usage
