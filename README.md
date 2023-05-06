@@ -4,16 +4,18 @@ This repository contains various resources related to CTF (Capture The Flag) com
 # Contents
 The following is a list of the resources available in this repository:
 
-# Tools: A list of useful tools and software for CTF competitions.
+# Tools
+A list of useful tools and software for CTF competitions.
 
-# Challenges: A collection of CTF challenges from various competitions, with solutions and write-ups where available.
+# Challenges
+A collection of CTF challenges from various competitions, with solutions and write-ups where available.
 Guides: Guides and tutorials on various topics related to CTF competitions, including web exploitation, cryptography, reverse engineering, and more.
 
-# CTF Platforms: A list of popular CTF platforms for hosting and participating in CTF competitions.
+# CTF Platforms
+A list of popular CTF platforms for hosting and participating in CTF competitions.
 
 #Usage
 To use any of the resources in this repository, simply browse or download the relevant files or folders. The tools and software included in this repository should be installed and used according to their respective documentation and instructions.
-
 For the challenges and guides included in this repository, simply open the relevant file or folder to access the content. Solutions and write-ups for the challenges are provided where available.
 
 # Disclaimer
